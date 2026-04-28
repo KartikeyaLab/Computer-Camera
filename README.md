@@ -6,6 +6,8 @@ It was an inspiration from a [YouTube video](https://youtube.com/shorts/FIZI3k7m
 
 ---
 
+<img src="https://kartikeyalab.github.io/The-Archive/Pictures/vid_001.gif" width="100%" />
+
 ## How to run it
 
 **Requirements** — Python 3.8+ and a webcam.
