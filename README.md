@@ -92,4 +92,4 @@ README.md             ← you are here
 
 ---
 
-*Made with euphoria.*
+*Made with euphoria. ✨*
