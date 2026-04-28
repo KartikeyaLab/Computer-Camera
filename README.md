@@ -2,9 +2,7 @@
 
 > Your face, in the language of computers.
 
-This is a program through which your camera captures the world and renders it entirely in characters — letters, symbols, punctuation — in real time. The idea behind this is really beautiful. It was an inspiration from a [YouTube video](https://youtube.com/shorts/FIZI3k7mTvA?si=vDPck3tcL50K4xzT) I watched years ago as a kid, and it stayed in my mind. I wanted to create something close to it, something that could capture the world in the language of computers.
-
-It is beautiful!! More than that, the most beautiful thing was people enjoying looking at themselves through the lens of characters… and it was a good time, exhibiting this program.
+It was an inspiration from a [YouTube video](https://youtube.com/shorts/FIZI3k7mTvA?si=vDPck3tcL50K4xzT) I watched years ago as a kid, and it stayed in my mind. I wanted to create something close to it, something that could capture the world in the language of computers. It is beautiful!! More than that, the most beautiful thing was people enjoying looking at themselves through the lens of characters… and it was a good time, exhibiting this program.
 
 ---
 
