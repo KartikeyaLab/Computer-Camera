@@ -1,28 +1,16 @@
-# ASCII Camera
+# Computer Camera
 
-> Your face. Rendered in characters.
+> Your face, in the language of computers.
 
-A real-time camera feed converted into ASCII art — live, in your terminal window. Switch character sets, toggle color, detect edges, record videos, and take screenshots. All from your keyboard.
+This is a program through which your camera captures the world and renders it entirely in characters — letters, symbols, punctuation — in real time. The idea behind this is really beautiful. It was an inspiration from a [YouTube video](https://youtube.com/shorts/FIZI3k7mTvA?si=vDPck3tcL50K4xzT) I watched years ago as a kid, and it stayed in my mind. I wanted to create something close to it, something that could capture the world in the language of computers.
 
----
-
-## What it looks like
-
-```
- . . : : ; ; = = x x X X $ $ @ @
-: . . : ; = x X $ @ @ $ X x = ; :
-; : . ; = x X $ @ . . @ $ X x = ;
-= ; : = x X $ @ .     . @ $ X x =
-```
-
-*(except it's your actual face)*
+It is beautiful!! More than that, the most beautiful thing was people enjoying looking at themselves through the lens of characters… and it was a good time, exhibiting this program.
 
 ---
 
-## Requirements
+## How to run it
 
-- Python 3.8+
-- A webcam
+**Requirements** — Python 3.8+ and a webcam.
 
 Install dependencies:
 
@@ -30,93 +18,76 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
----
-
-## Run
+Run:
 
 ```bash
 python ascii_camera.py
 ```
 
-That's it. Your camera opens instantly.
+Your camera opens. That's it.
 
 ---
 
 ## Controls
 
-### Drawing & Modes
+### Modes
 
-| Key | Action |
-|-----|--------|
-| `C` | Toggle **color mode** — characters take on the real color of what the camera sees |
-| `E` | Toggle **edge detection** — outlines your features sharply |
-| `I` | Toggle **invert** — flip light and dark characters |
+| Key | What it does |
+|-----|-------------|
+| `C` | Color mode — characters take on the real colors the camera sees |
+| `E` | Edge detection — outlines and sharpens everything |
+| `I` | Invert — flips light and dark |
 
-### Character Sets
+### Character sets
 
-| Key | Style | Preview |
-|-----|-------|---------|
-| `1` | Simple | ` .:;+=xX$@` |
-| `2` | Detailed | Full ASCII density range |
-| `3` | Blocks | ` ░▒▓█` |
-| `4` | Custom | ` .:/\|!@#$%^&*` |
-| `5` | Binary | ` █` — stark black and white |
-| `6` | Minimal | ` .-+*#@` |
+| Key | Style |
+|-----|-------|
+| `1` | Simple — ` .:;+=xX$@` |
+| `2` | Detailed — full density range |
+| `3` | Blocks — ` ░▒▓█` |
+| `4` | Custom — ` .:/\|!@#$%^&*` |
+| `5` | Binary — ` █` |
+| `6` | Minimal — ` .-+*#@` |
 
 ### Resolution
 
-| Key | Action |
-|-----|--------|
-| `+` or `=` | Increase resolution (more characters, more detail) |
-| `-` or `_` | Decrease resolution (fewer characters, faster) |
+| Key | What it does |
+|-----|-------------|
+| `+` | More characters, more detail |
+| `-` | Fewer characters, faster |
 
 ### Capture
 
-| Key | Action |
-|-----|--------|
-| `S` | Save a **screenshot** — saved as `ascii_screenshot_TIMESTAMP.png` |
-| `R` | Start / stop **recording** — saved as `ascii_recording_TIMESTAMP.mp4` |
+| Key | What it does |
+|-----|-------------|
+| `S` | Screenshot — saves as `ascii_screenshot_TIMESTAMP.png` |
+| `R` | Start / stop recording — saves as `ascii_recording_TIMESTAMP.mp4` |
 
-A red dot appears in the top-left corner while recording is active, with a live timer.
+A red dot appears in the corner while recording, with a live timer.
 
 ### Exit
 
-| Key | Action |
-|-----|--------|
+| Key | What it does |
+|-----|-------------|
 | `Q` or `Esc` | Quit |
 
 ---
 
-## Tips
+## How it actually works
 
-- **Best results** in good lighting facing a plain background
-- **Edge mode + binary** (`E` then `5`) gives a striking silhouette effect
-- **Color mode** (`C`) is slower — drop resolution with `-` if FPS dips
-- **Detailed charset** (`2`) gives the most depth and shadow on faces
-- FPS counter is shown live in the top-left corner
+Each frame from your camera is converted to grayscale, then resized down to a small grid — 120 columns by 60 rows by default. Every pixel in that grid has a brightness value, and that brightness maps to a character. Bright areas get dense characters like `@` or `#`, dark areas get light ones like `.` or just a space. Those characters are drawn onto a blank canvas, one by one, and that canvas becomes your live window.
+
+The result is your world, rendered in text.
 
 ---
 
-## File Structure
+## File structure
 
 ```
-ascii_camera.py       ← main program
+ascii_camera.py       ← the program
 requirements.txt      ← dependencies
 README.md             ← you are here
 ```
-
----
-
-## How it works
-
-Each frame from your camera is:
-1. Converted to grayscale
-2. Resized to a small grid (default 120×60 characters)
-3. Each pixel's brightness maps to a character — bright = dense, dark = sparse
-4. Characters are drawn onto a blank canvas at their grid position
-5. The canvas is shown as the live window
-
-The smoothness of the output is controlled by the character set density and grid resolution.
 
 ---
 
