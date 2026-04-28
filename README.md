@@ -25,7 +25,7 @@ Run:
 python ascii_camera.py
 ```
 
-Your camera opens. That's it.
+Your camera opens. 🥳
 
 ---
 
